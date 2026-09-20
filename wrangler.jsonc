@@ -1,0 +1,11 @@
+{
+  // Only needed if you deploy as a Cloudflare Worker (the CLI route, or the
+  // dashboard's "Workers" flow). If you use Pages instead — Git-connected or
+  // drag-and-drop — Cloudflare ignores this file: leave the build command
+  // empty and set the output directory to "public".
+  "name": "ace-csca",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./public"
+  }
+}

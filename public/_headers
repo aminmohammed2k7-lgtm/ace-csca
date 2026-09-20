@@ -1,0 +1,18 @@
+# Cloudflare reads this file on both Pages and Workers static assets.
+# It is never served to visitors — it only sets response headers.
+
+# The published course. Must never be served stale, or a student can sit
+# on yesterday's tests for as long as their browser feels like it.
+/content.json
+  Cache-Control: no-cache
+  Content-Type: application/json; charset=utf-8
+
+# Same for the app shell, so a new version reaches everyone on refresh.
+/
+  Cache-Control: no-cache
+/index.html
+  Cache-Control: no-cache
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
